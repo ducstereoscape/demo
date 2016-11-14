@@ -42,22 +42,58 @@
   <hr>
 </div>
 <div class="container">
+
 <hr>
 
 <div class="row">
     <div class="text-center col-sm-3">
-      <h1 id="element" onclick="myFunction()">3D</h4>
+      <h4 id="3d-text-1" onclick="myFunction()">By starting your jouney with  digitalized material</h4>
     </div>
     <div class="text-center col-sm-3">
-      <h1>VR</h4>
+      <h4>By adding the powerful sense of being there</h4>
 	</div>
     <div class="text-center col-sm-3">
-      <h1>AR</h4>
+      <h4>By adding more layers, you can join the real environments </h4>
 	</div>
     <div class="text-center col-sm-3">
-      <h1>MR</h4>
+      <h4>By combining IoT and industry internet, you can interact with real world with VR and AR</h4>
 	</div>
   </div>
+
+<div class="row">
+    <div class="text-center col-sm-3">
+    	<div id="doughnut-1" class="chart"></div>
+      <h1 id="3d" onclick="myFunction()">3D</h1>
+    </div>
+    <div class="text-center col-sm-3">
+    	<div id="doughnut-2" class="chart"></div>
+      <h1>VR</h1>
+	</div>
+    <div class="text-center col-sm-3">
+    	<div id="doughnut-3" class="chart"></div>
+      <h1>AR</h1>
+	</div>
+    <div class="text-center col-sm-3">
+    	<div id="doughnut-4" class="chart"></div>
+      <h1>MR</h1>
+	</div>
+  </div>
+  
+  <div class="row">
+    <div class="text-center col-sm-3">
+      <h4 id="3d-text-2" onclick="myFunction()">3D Modeling, 3D Animation, 3D Scanning, Interactive videos and presentations</h4>
+    </div>
+    <div class="text-center col-sm-3">
+      <h4>Fully., 360° immersive applications to all devices in</h4>
+	</div>
+    <div class="text-center col-sm-3">
+      <h4>End results=our products here</h4>
+	</div>
+    <div class="text-center col-sm-3">
+      <h4>End results=our products here</h4>
+	</div>
+  </div>
+  
   <hr>
   <div class="row">
     <div class="text-center col-md-6 col-md-offset-3">
@@ -75,12 +111,34 @@
 
 <script src="//code.jquery.com/jquery.min.js"></script>
 <script src="js/rotate.js"></script>
-
+<script src="js/donutdraw.js"></script>
 
 <script>
 function myFunction() {
     $("#element").rotate(360);
 }
+</script>
+
+<script>
+$("#3d-text-1").hide();
+$("#3d-text-2").hide();
+$(document).ready(function(){
+    $("#3d").click(function(){
+		var clicks = $(this).data('clicks');
+  if (clicks) {
+     // odd clicks
+	 $("#3d-text-1").fadeOut();
+	 $("#3d-text-2").fadeIn();
+	
+  } else {
+     // even clicks
+	 $("#3d-text-1").fadeIn();
+	 $("#3d-text-2").fadeOut();
+  }
+  $(this).data("clicks", !clicks);
+		
+    });
+});
 </script>
 
 </body>
