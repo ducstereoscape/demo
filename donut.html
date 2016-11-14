@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Donut</title>
+</head>
+
+<body>
+
+<div id="myDoughnut"> </div>
+
+<script src="js/Chart.js"></script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src="js/doughnutit.js"></script>
+<link rel="stylesheet" type="text/css" href="css/doughnutit.css">
+
+
+<script>
+
+var doughnutData = [
+{value:65,color:"#819596"},
+{value:100-65,color:"#dce0df"}
+];
+
+$( "#myDoughnut" ).doughnutit({
+dnData: doughnutData,
+dnSize: 450,
+dnInnerCutout: 60,
+dn<a href="http://www.jqueryscript.net/animation/">Animation</a>: true,
+dnAnimationSteps: 60,
+dnAnimationEasing: 'linear',
+dnStroke: false,
+dnShowText: true,
+dnFontSize: '70px',
+dnFontColor: "#819596",
+dnText: 'G1',
+dnStartAngle: 90,
+dnCounterClockwise: false,
+dnRightCanvas: {
+rcRadius: 15,
+rcPreMargin: 100,
+rcMargin: 20,
+rcHeight: 100,
+rcOffset: 15,
+rcLineWidth: 200,
+rcSphereColor: '#819596',
+rcSphereStroke: '#819596',
+rcTop:{
+rcTopLineColor: '#819596',
+rcTopDashLine: 5,
+rcTopFontSize: '20px',
+rcStrokeWidth: 3,
+rctAbove: {
+rctText: 'MÉDIA',
+rctOffset: 5,
+rctImageOffsetRight: 5,
+rctImageOffsetBottom: 0,
+// rctImage: 'calendar.png',
+},
+rctBelow: {
+rctText: '6.5',
+rctFontSize: '50px',
+rctOffset: 15,
+rctOffset: 5,
+rctImageOffsetRight: 5,
+rctImageOffsetBottom: 0,
+// rctImage: 'calendar.png'
+}
+},
+rcBottom:{
+rcBottomDashLine: 0,
+rcBottomFontSize: '15px',
+rcBottomLineColor: '#819596',
+rcStrokeWidth: 3,
+rcbAbove: {
+// rcbImage: 'calendar.png',
+rcbImageOffsetBottom: 0,
+rcbImageOffsetRight: 5,
+rcbText: 'DATA DE G3',
+rcbFontSize: '20px',
+rcbOffset: 5
+},
+rcbBelow: {
+rcbImage: 'calendar.png',
+rcbImageOffsetRight: 5,
+rcbImageOffsetBottom: 0,
+rcbText: '20/10/2013',
+rcbOffset: 10
+}
+}
+},
+dnLeftCanvas: {
+lcRadius: 15,
+lcPreMargin: 100,
+lcMargin: 20,
+lcHeight: 100,
+lcOffset: 15,
+lcLineWidth: 200,
+lcSphereColor: '#819596',
+lcSphereStroke: '#819596',
+lcTop:{
+lcTopLineColor: '#819596',
+lcTopDashLine: 5,
+lcTopFontSize: '20px',
+lcStrokeWidth: 3,
+lctAbove: {
+lctText: 'NOTA G1',
+lctOffset: 5,
+lctImageOffsetRight: 5,
+lctImageOffsetBottom: 0,
+// lctImage: 'calendar.png',
+},
+lctBelow: {
+lctText: '8.4',
+lctFontSize: '50px',
+lctOffset: 15,
+lctOffset: 5,
+lctImageOffsetRight: 5,
+lctImageOffsetBottom: 0,
+// lctImage: 'calendar.png'
+}
+},
+lcBottom:{
+lcBottomDashLine: 0,
+lcBottomFontSize: '15px',
+lcBottomLineColor: '#819596',
+lcStrokeWidth: 3,
+lcbAbove: {
+// lcbImage: 'calendar.png',
+lcbImageOffsetBottom: 0,
+lcbImageOffsetRight: 5,
+lcbText: 'NOTA G2',
+lcbFontSize: '20px',
+lcbOffset: 5
+},
+lcbBelow: {
+lcbImage: 'calendar.png',
+lcbImageOffsetRight: -10,
+lcbImageOffsetBottom: 1,
+lcbText: '10/02/1994',
+lcbOffset: 10
+}
+}
+}
+});// End Doughnut
+
+</script>
+
+<script>
+
+$( "#myDoughnut" ).doughnutit({
+// Data for a full doughnut
+dnData: {value:100,color:"#819596"},
+// Size of the doughnut
+dnSize: 200,
+// Percentage of the inner cutout
+dnInnerCutout: 60,
+// Animate it or not?
+dnAnimation: true,
+// Amount of animation steps
+dnAnimationSteps: 60,
+// Type of animation
+dnAnimationEasing: 'linear',
+// Stroke between the sections of the doughnut
+dnStroke: false,
+// Show the text inside the doughnut
+dnShowText: false,
+// Text inside the doughnut
+dnText: '',
+// Font for the text inside the doughnut
+dnFontFamily: 'Arial',
+// Style for the text inside
+dnFontStyle: 'normal',
+// Size in px for the text inside
+dnFontSize: '190px',
+// Color for the text inside
+dnFontColor: "#666",
+// Offset to stay in center
+dnFontOffset: 35,
+// Start angle for the first slice of the doughnut
+dnStartAngle: -90,
+// Animation in counter clockwise - HAS ISSUES
+dnCounterClockwise: false,
+// If an object is passed it generates a right canvas with some text
+dnRightCanvas: false,
+// If an object is passed it generates a left canvas with some text
+dnLeftCanvas: false
+});
+
+</script>
+
+</body>
+</html>
