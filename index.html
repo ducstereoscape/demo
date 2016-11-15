@@ -62,8 +62,8 @@
 
 <div class="row">
     <div class="text-center col-sm-3">
-    	<div id="doughnut-1" class="chart"></div>
-      <h1 id="3d" onclick="myFunction()">3D</h1>
+    	<div id="doughnut-1" class="chart" onclick="myFunction()"></div>
+      <h1 id="3d">3D</h1>
     </div>
     <div class="text-center col-sm-3">
     	<div id="doughnut-2" class="chart"></div>
@@ -123,7 +123,7 @@ function myFunction() {
 $("#3d-text-1").hide();
 $("#3d-text-2").hide();
 $(document).ready(function(){
-    $("#3d").click(function(){
+    $("#doughnut-1").click(function(){
 		var clicks = $(this).data('clicks');
   if (clicks) {
      // odd clicks

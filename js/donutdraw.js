@@ -1,16 +1,16 @@
 // JavaScript Document
 $(function(){
   $("#doughnut-1").drawDoughnutChart([
-    { title: "3D",         value : 120,  color: "#2C3E50" }
+    { title: "3D",         value : 100,  color: "#007fff" }
   ]);
   $("#doughnut-2").drawDoughnutChart([
-    { title: "VR",         value : 120,  color: "#2C3E50" }
+    { title: "VR",         value : 100,  color: "#323c87" }
   ]);
   $("#doughnut-3").drawDoughnutChart([
-    { title: "AR",         value : 120,  color: "#2C3E50" }
+    { title: "AR",         value : 100,  color: "#007fff" }
   ]);
   $("#doughnut-4").drawDoughnutChart([
-    { title: "MR",         value : 120,  color: "#2C3E50" }
+    { title: "MR",         value : 100,  color: "#323c87" }
   ]);
 });
 /*!
@@ -49,7 +49,7 @@ $(function(){
         tipOffsetY: -45,
         tipClass: "doughnutTip",
         summaryClass: "doughnutSummary",
-        summaryTitle: "3D",
+        summaryTitle: "Total",
         summaryTitleClass: "doughnutSummaryTitle",
         summaryNumberClass: "doughnutSummaryNumber",
         beforeDraw: function() {  },
@@ -115,7 +115,7 @@ $(function(){
                      "margin-left": -(summarySize / 2) + "px",
                      "margin-top": -(summarySize / 2) + "px"
                    });
-    var $summaryTitle = $('<p class="' + settings.summaryTitleClass + '">' + settings.summaryTitle + '</p>').appendTo($summary);
+    //var $summaryTitle = $('<p class="' + settings.summaryTitleClass + '">' + settings.summaryTitle + '</p>').appendTo($summary);
     var $summaryNumber = $('<p class="' + settings.summaryNumberClass + '"></p>').appendTo($summary).css({opacity: 0});
 
     for (var i = 0, len = data.length; i < len; i++) {
@@ -183,7 +183,7 @@ $(function(){
           rotateAnimation = 1;
       if (settings.animation && settings.animateRotate) rotateAnimation = animationDecimal;//count up between0~1
 
-      drawDoughnutText(animationDecimal, segmentTotal);
+      //drawDoughnutText(animationDecimal, segmentTotal);
 
       $pathGroup.attr("opacity", animationDecimal);
 
