@@ -40,7 +40,7 @@ $(function(){
         baseColor: "rgba(0,0,0,0.5)",
         baseOffset: 4,
         edgeOffset : 10,//offset from edge of $this
-        percentageInnerCutout : 75,
+        percentageInnerCutout : 80,
         animation : true,
         animationSteps : 90,
         animationEasing : "easeInOutExpo",
@@ -164,8 +164,8 @@ $(function(){
     };
     function pathMouseEnter(e) {
       var order = $(this).data().order;
-      $tip.text(data[order].title + ": " + data[order].value)
-          .fadeIn(200);
+      //$tip.text(data[order].title + ": " + data[order].value)
+        //  .fadeIn(200);
       settings.onPathEnter.apply($(this),[e,data]);
     }
     function pathMouseLeave(e) {
