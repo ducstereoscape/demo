@@ -27,20 +27,33 @@
   <hr>
 </div>
 <div class="container">
-  <div class="row" style="height: 250px"> </div>
+  <div class="row" style="height: 1000px">
+  	
+  </div>
   <div class="row">
-    
+  	<div class="scrollme">
+      <div
+        class="animateme"
+        data-when="enter"
+        data-from="0.5"
+        data-to="0"
+        data-opacity="1"
+        data-translatex="-200"
+        data-rotatez="90"
+      >
+   	  <img src="../../../Downloads/Pictures/Stereoscape_Logo/STS_rings_small.png" width="480" height="270" alt=""/> </div>
+    </div>
   </div>
   <div class="row">
     <div class="text-center col-sm-3">
-      <h1 data-popup-open="popup-1">3D</h1>
-      <div class="popup" data-popup="popup-1">
+      <h1 data-popup-open="">3D</h1>
+      <div class="popup" data-popup="">
         <div class="popup-inner">
           <h3>By starting your jouney with  digitalized material</h3>
           <h3>3D Modeling, 3D Animation, 3D Scanning, Interactive videos and presentations</h3>
-          <a class="popup-close" data-popup-close="popup-1" href="#">x</a> </div>
+          <a class="popup-close" data-popup-close="" href="#">x</a> </div>
       </div>
-      <div id="doughnut-1" data-popup-open="popup-1" class="chart"></div>
+      <div id="doughnut-1" data-popup-open="" class="chart"></div>
     </div>
     <div class="text-center col-sm-3">
       <h1>VR</h1>
@@ -92,8 +105,8 @@
 <script src="//code.jquery.com/jquery.min.js"></script> 
 <script src="js/rotate.js"></script> 
 <script src="js/donutdraw.js"></script> 
-
-<script>
+//
+//<script>
 //$("#3d-text-1").hide();
 //$("#3d-text-2").hide();
 //$(document).ready(function(){
@@ -113,7 +126,7 @@
 //		
 //    });
 //});
-</script> 
+//</script> 
 <script>
 $(function() {
     //----- OPEN
@@ -133,5 +146,9 @@ $(function() {
     });
 });
 </script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="js/jquery.scrollme.js"></script>
+
 </body>
 </html>
